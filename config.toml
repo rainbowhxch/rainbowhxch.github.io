@@ -99,7 +99,7 @@ theme = "LoveIt"
     defaultHiddenFromHomePage = false
     # 作者的社交信息设置
 [params.social]
-  GitHub = "https://github.com/rainbowhxch"
+  GitHub = "rainbowhxch"
   Linkedin = ""
   Twitter = ""
   Instagram = ""
