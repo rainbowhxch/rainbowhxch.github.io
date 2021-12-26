@@ -1,3 +1,0 @@
----
-hiddenFromSearch: true
----
