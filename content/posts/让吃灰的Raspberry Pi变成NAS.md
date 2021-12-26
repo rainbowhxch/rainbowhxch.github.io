@@ -1,15 +1,12 @@
 ---
 title: "让吃灰的Raspberry Pi变成NAS"
 date: 2021-12-25T00:54:24+08:00
-description: "NAS Pi here."
+summary: "NAS Pi here."
 categories: ["Raspberry Pi"]
 tags: ["Raspberry Pi", "NAS", "openmediavault"]
-images: ["https://raw.githubusercontent.com/rainbowhxch/picgo-storage/main/NAS%20Pi.JPG"]
-comment:
-  enable: true
+featuredImage: "https://raw.githubusercontent.com/rainbowhxch/picgo-storage/main/NAS%20Pi.JPG"
 draft: false
 ---
-
 ## 操作环境
 - raspberry pi 4b
 - 一个普通的SATA M2固态盘
