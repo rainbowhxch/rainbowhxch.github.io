@@ -1,7 +1,12 @@
 ---
-title: "让吃灰的raspberry Pi变成NAS"
+title: "让吃灰的Raspberry Pi变成NAS"
 date: 2021-12-25T00:54:24+08:00
-tags: ["raspberry pi", "NAS", "openmediavault"]
+description: "NAS Pi here."
+categories: ["Raspberry Pi"]
+tags: ["Raspberry Pi", "NAS", "openmediavault"]
+images: ["https://raw.githubusercontent.com/rainbowhxch/picgo-storage/main/NAS%20Pi.JPG"]
+comment:
+  enable: true
 draft: false
 ---
 
@@ -55,9 +60,18 @@ openmediavault默认跑在80端口，直接浏览器访问raspberry pi的ip地�
 
 点`对勾`使更改的配置生效
 
--- TODO: Linux/Windows Client 配置 --
-
 P.S. 登录后第一件事**记得改密码**
+
+## Windows Samba Folder
+![Windows Samba Folder](https://raw.githubusercontent.com/rainbowhxch/picgo-storage/main/NAS%20Pi%20Windows%20Client.png)
+
+## Linux NFS Mount
+```bash
+sudo apt update
+sudo apt install nfs-common
+# such as 'sudo mount -t nfs 192.168.100.2:/ch /mnt/ch'
+sudo mount -t nfs <shared folder location> <mount point> 
+```
 
 ## Reference
 1. [官方文档](https://openmediavault.readthedocs.io/en/5.x/index.html)

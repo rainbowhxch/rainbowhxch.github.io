@@ -40,7 +40,7 @@ theme = "LoveIt"
   # LoveIt 新增 | 0.2.0 页面头部导航栏标题配置
   [params.header.title]
     # LOGO 的 URL
-    logo = ""
+    logo = "https://raw.githubusercontent.com/rainbowhxch/picgo-storage/main/avatar.jpeg"
     # 标题名称
     name = "Rainbowhxch's Blog"
     # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
@@ -48,7 +48,7 @@ theme = "LoveIt"
     # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
     post = ""
     # LoveIt 新增 | 0.2.5 是否为标题显示打字机动画
-    typeit = false
+    typeit = true
 
 # 页面底部信息配置
 [params.footer]
@@ -76,9 +76,9 @@ theme = "LoveIt"
   [params.home.profile]
     enable = true
     # Gravatar 邮箱，用于优先在主页显示的头像
-    gravatarEmail = "rainbowhxch@gmail.com"
+    gravatarEmail = ""
     # 主页显示头像的 URL
-    avatarURL = ""
+    avatarURL = "https://raw.githubusercontent.com/rainbowhxch/picgo-storage/main/avatar.jpeg"
     # LoveIt 更改 | 0.2.7 主页显示的网站标题 (支持 HTML 格式)
     title = "Rainbowhxch"
     # 主页显示的网站副标题
@@ -164,6 +164,59 @@ theme = "LoveIt"
   Email = "rainbowhxch@gmail.com"
   RSS = true # LoveIt 新增 | 0.2.0
 
+[params.page]
+  # 评论系统设置
+  [params.page.comment]
+    enable = true
+    [params.page.comment.valine]
+      enable = true
+      appId = "ik1eGhTDlR5YsktBNXIYFgsg-MdYXbMMI"
+      appKey = "SHX1OABAl3LoHbdmPRof42qK"
+      placeholder = ""
+      avatar = "https://raw.githubusercontent.com/rainbowhxch/picgo-storage/main/avatar.jpeg"
+      meta= ""
+      pageSize = 10
+      lang = ""
+      visitor = true
+      recordIP = true
+      highlight = true
+      enableQQ = false
+      serverURLs = "https://ik1eghtd.api.lncldglobal.com"
+      # LoveIt 新增 | 0.2.6 emoji 数据文件名称, 默认是 "google.yml"
+      # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
+      # 位于 "themes/LoveIt/assets/data/emoji/" 目录
+      # 可以在你的项目下相同路径存放你自己的数据文件:
+      # "assets/data/emoji/"
+      emoji = "google.yml"
+
+[markup]
+  # 语法高亮设置
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    # false 是必要的设置
+    # (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
+  # Goldmark 是 Hugo 0.60 以来的默认 Markdown 解析库
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      # 是否在文档中直接使用 HTML 标签
+      unsafe = true
+  # 目录设置
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+
 [menu]
   [[menu.main]]
     identifier = "posts"
@@ -192,15 +245,16 @@ theme = "LoveIt"
     url = "/categories/"
     title = ""
     weight = 3
-
-# Hugo 解析文档的配置
-[markup]
-  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
-  [markup.highlight]
-    # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
-    noClasses = false
+  [[menu.main]]
+    identifier = "friends"
+    pre = ""
+    post = ""
+    name = "友链"
+    url = "/friends"
+    title = ""
+    weight = 4
 
 [author]
   name = "Chen Hengxun"
   email = "rainbowhxch@gmail.com"
-  link = "rainbowhxch.github.io"
+  link = "rainbowch.net"
